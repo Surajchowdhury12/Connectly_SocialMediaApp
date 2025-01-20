@@ -1,6 +1,3 @@
-
-Here's a sample README file for your social media app "Connectly" built using the MERN stack:
-
 Connectly - A Social Media Application
 Connectly is a social media platform built using the MERN stack (MongoDB, Express.js, React, Node.js). It allows users to create profiles, connect with others, share posts, and engage with content through likes and comments.
 
@@ -25,5 +22,6 @@ Prerequisites
 Node.js (version 14 or higher)
 MongoDB (can be a local or cloud MongoDB instance)
 npm or yarn for managing packages
-
- Contact : @suraj.ch122@gmail.com
+Contact
+For any inquiries or support, feel free to contact me at:
+Email: @suraj.ch122@gmail.com
