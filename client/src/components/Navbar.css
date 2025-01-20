@@ -1,0 +1,91 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 10px;
+    /* Reduce the vertical padding further */
+    background-color: #007bff;
+    color: white;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Reduce horizontal gap if needed */
+    height: 50px;
+    /* Set a specific height for the navbar */
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.navbar-logo img {
+    height: 40px;
+    /* Reduced logo height */
+    margin-right: 10px;
+    margin-top: -15px;
+
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 18px;
+    /* Adjust the font size of the title */
+    height: 40px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    /* Adjust horizontal spacing */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    /* Align items vertically */
+    margin-top: -30px;
+}
+
+.navbar nav ul li {
+    display: inline;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    /* Adjust font size to fit better */
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    /* Adjust font size */
+}
+
+.logout-btn:hover {
+    text-decoration: underline;
+}
+
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.navbar-profile-pic {
+    width: 40px;
+    /* Reduce profile pic size */
+    height: 40px;
+    /* Reduce profile pic size */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    object-fit: cover;
+    cursor: pointer;
+    margin-top: -20px;
+}

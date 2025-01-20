@@ -1,0 +1,189 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* General styles for the home page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f2f6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+
+
+/* Search box styles */
+.search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    /* Adjusted space for the navbar */
+    z-index: 1;
+    /* Ensure it stays in front of the navbar */
+}
+
+.search-box {
+    width: 50%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.search-box:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Adjusted the margin-top to reduce space between search box and posts */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    /* Reduced margin-top here */
+}
+
+/* Sidebar Styles for Suggested Friends */
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin-left: 10px;
+}
+
+.suggested-friends {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.suggested-friend {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.friend-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.friend-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.friend-name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.add-friend-btn {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-friend-btn:hover {
+    background-color: #005bb5;
+}
+
+
+.feed {
+    width: 55%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.create-post {
+    margin-bottom: 20px;
+}
+
+.create-post textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.create-post button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.create-post button:hover {
+    background-color: #45a049;
+}
+
+.posts {
+    margin-top: 20px;
+}
+
+.post {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-actions button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-actions button:hover {
+    background-color: #0056b3;
+}

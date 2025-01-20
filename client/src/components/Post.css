@@ -1,0 +1,34 @@
+.post {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.post h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.post p {
+    margin: 10px 0;
+}
+
+.post-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.post-actions button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-actions button:hover {
+    background-color: #0056b3;
+}
