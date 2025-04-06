@@ -79,25 +79,32 @@ exports.getUserDetails = async (req, res) => {
 
 
 exports.updateProfilePic = async (req, res) => {
-    const userId = req.user.id; // Extract user ID from the token
-    const { profilePic } = req.body;
-
-    if (!profilePic) {
-        return res.status(400).json({ message: "Profile picture URL is required" });
-    }
-
     try {
+        const userId = req.user.id; // Extract user ID from token
+
+        // Check if a file was uploaded
+        if (!req.file) {
+            return res.status(400).json({ message: "No file uploaded" });
+        }
+
+        const profilePicPath = `/uploads/${req.file.filename}`; // Save the file path
+
+        // Update user's profile picture in the database
         const user = await User.findByIdAndUpdate(
             userId,
-            { profilePic },
-            { new: true } // Return the updated user object
+            { profilePic: profilePicPath },
+            { new: true }
         );
 
         if (!user) {
             return res.status(404).json({ message: "User not found" });
         }
 
-        res.status(200).json({ message: "Profile picture updated successfully", user });
+        res.status(200).json({
+            message: "Profile picture updated successfully",
+            fileUrl: user.profilePic,
+        });
+
     } catch (error) {
         res.status(500).json({ message: "Error updating profile picture", error });
     }

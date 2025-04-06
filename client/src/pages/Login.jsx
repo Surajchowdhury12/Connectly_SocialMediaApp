@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../context/UserContext";
 import "./Login.css"; // Add your styles
 
 const Login = () => {
     const [form, setForm] = useState({ email: "", password: "" });
+    const { setProfilePic } = useContext(UserContext); 
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -28,6 +30,11 @@ const Login = () => {
             if (response.ok) {
                 alert("Login Successful");
                 localStorage.setItem("token", data.token); // Save the token
+                if (data.profilePic) {
+                    const profilePicUrl = `http://localhost:5000${data.profilePic}`; // ✅ Fix URL if needed
+                    localStorage.setItem("profilePic", profilePicUrl); // ✅ Save profile pic
+                    setProfilePic(`http://localhost:5000${data.profilePic}`);
+                }
                 navigate("/"); // Redirect to home page after successful login
             } else {
                 alert(data.message || "Error during login");
